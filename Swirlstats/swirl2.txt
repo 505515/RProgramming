@@ -1,0 +1,21 @@
+[2~[2~swirl2:
+
+ls()
+
+Lister objekter du har lagret, ikke filer.
+
+dir() eller list.files()
+
+lister filer i getwd()
+
+?list.files()
+
+Hjelp om list.files()
+
+args(funksjon) f.eks args(list.files)
+
+Lister ut argumenter list.files
+
+> dir.create(file.path("testdir2", "testdir3"), recursive = TRUE)
+
+Lager en nøstet katalog.

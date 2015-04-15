@@ -26,12 +26,3 @@ Please visit our Help page if you have trouble completing any of these steps.
 | If at any point you'd like more information on a particular topic related to R, you can type help.start() at the prompt,
 | which will open a menu of resources (either within RStudio or your default web browser, depending on your setup).
 | Alternatively, a simple web search often yields the answer you're looking for.
-
-***
-
-| The easiest way to create a vector is with the c() function, which stands for 'concatenate' or 'combine'. To create a
-| vector containing the numbers 1.1, 9, and 3.14, type c(1.1, 9, 3.14). Try it now and store the result in a variable called
-| z.
-
-| Behind the scenes, R is 'recycling' the 2 to make a vector of 2s and the 100 to make a vector of 100s. In other words, when
-| you ask R to compute z * 2 + 100, what it really computes is this: z * c(2, 2, 2) + c(100, 100, 100).
