@@ -1,0 +1,11 @@
+NA og NaN kan være et pattern deg også
+
+sample(c(y,z, 100)
+
+Velg ut 100 tilfeldige verdier fra y og z
+
+is.na()
+
+Finner alle is.na verdiene i en liste
+
+

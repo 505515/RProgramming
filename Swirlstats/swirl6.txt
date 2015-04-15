@@ -1,0 +1,53 @@
+Index vectors come in four different flavors -- logical vectors, vectors of positive integers, vectors of negative integers,
+| and vectors of character strings
+
+x[1:10]
+
+List 10 første verdier i x
+
+> x[is.na(x)]
+ [1] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA
+
+Lister ut alle NA i X
+
+> x[!is.na(x)]
+
+Lister ut alt utenom NA
+
+> y[y < 0]
+
+Lister ut alt i y som er større en 0
+
+> x[!is.na(x) & x > 0]
+
+Fjerner alle na og lister ut alle x større en 0
+
+i R er første element i en liste 1 og ikke 0 som i de fleste prog språk
+
+> x[c(3, 5, 7)]
+
+Hent verdi 3, 5 og 7 fra X
+
+R vil la deg hente element 3000 fra en liste selv om listen bare er 100 lang
+
+> x[c(-2, -10)] eller x[-c(2, 10)]
+
+Lister ut hele x utenom element 2 og 10
+
+> vect <- c(foo = 11, bar = 2, norf = NA)
+> vect
+ foo  bar norf 
+  11    2   NA
+
+> names(vect)
+[1] "foo"  "bar"  "norf"
+
+> names(vect2) <- c("foo", "bar", "norf")
+
+Har du en liste med 3 verdier, kan du navngi dem slik
+
+> vect["bar"]
+bar 
+  2
+
+

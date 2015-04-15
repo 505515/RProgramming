@@ -1,0 +1,47 @@
+You can use the `&` operator to evaluate AND across a vector. The `&&` version of AND only evaluates the first member of a
+| vector.
+
+> TRUE & c(TRUE, FALSE, FALSE)
+[1]  TRUE FALSE FALSE
+
+
+> TRUE && c(TRUE, FALSE, FALSE)
+[1] TRUE
+
+The OR operator follows a similar set of rules. The `|` version of OR evaluates OR across an entire vector, while the `||`
+| version of OR only evaluates the first member of a vector.
+
+All AND operators are evaluated
+| before OR operators
+
+> isTRUE(6 > 4)
+[1] TRUE
+
+> identical("twins", "twins")
+[1] TRUE
+
+> xor(5 == 6, !FALSE)
+[1] TRUE
+
+
+5 == 6 evaluates to FALSE, !FALSE evaluates to TRUE, so xor(FALSE, TRUE) evaluates to TRUE.
+
+
+> ints
+ [1]  4  6  2  1  9  5 10  8  3  7
+
+> which(ints > 7)
+[1] 5 7 8
+
+Finner alle verdier større en 7 
+
+> any(ints < 0)
+[1] FALSE
+
+Er noen under 0?
+
+> all(ints > 0)
+[1] TRUE
+
+Er alle over 0?
+
