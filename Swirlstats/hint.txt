@@ -1,0 +1,70 @@
+Lag en matrix og gjor den om til en data.frame
+
+x <- matrix(data = 1:12, nrow = 4, ncol = 3)
+> x
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    2    6   10
+[3,]    3    7   11
+[4,]    4    8   12
+
+> cnames <- c("Data1", "Data2", "Data3")
+
+> colnames(x) <- cnames
+
+> x
+     Data1 Data2 Data3
+[1,]     1     5     9
+[2,]     2     6    10
+[3,]     3     7    11
+[4,]     4     8    12
+> x$Data1
+Error in x$Data1 : $ operator is invalid for atomic vectors
+
+> is.data.frame(x)
+[1] FALSE
+
+> data.frame(x)
+  Data1 Data2 Data3
+1     1     5     9
+2     2     6    10
+3     3     7    11
+4     4     8    12
+
+> is.data.frame(x)
+[1] FALSE
+
+> y <- data.frame(x)
+
+> y
+  Data1 Data2 Data3
+1     1     5     9
+2     2     6    10
+3     3     7    11
+4     4     8    12
+
+> is.data.frame(y)
+[1] TRUE
+
+> y$Data1
+[1] 1 2 3 4
+
+> y
+  Data1 Data2 Data3
+1     1     5     9
+2     2     6    10
+3     3     7    11
+4     4     8    12
+> subset(y, Data1 > 3, select = C(Data2))
+Error in C(Data2) : object not interpretable as a factor
+> subset(y, Data1 > 3, select = c(Data2))
+  Data2
+4     8
+> subset(y, Data1 > 2, select = c(Data2))
+  Data2
+3     7
+4     8
+> subset(y, Data1 > 2, select = c(Data2, Data3))
+  Data2 Data3
+3     7    11
+4     8    12
