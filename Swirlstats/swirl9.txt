@@ -1,0 +1,40 @@
+Lagre funksjon i .R filer:
+
+boring_function <- function(x) {
+x
+}
+
+Lagre i boring_function.R, kalles med boring_function("test")
+
+To understand computations in R, two slogans are helpful: 1. Everything that exists is an object. 2. Everything that happens 
+is a function call.
+
+If you want to see the source code for any function, just type the function name without any arguments or parentheses.
+
+my_mean <- function(my_vector) {
+  # Write your code here!
+  # Remember: the last expression evaluated will be returned! 
+}
+
+Skriv funksjon, lagre filen og submit() i consol for å gjøre endringen tilgjengelig.
+
+| With all of this talk about arguments, you may be wondering if there is a way you can see a function's arguments (besides
+| looking at the documentation). Thankfully, you can use the args() function! Type: args(remainder) to examine the arguments
+| for the remainder function.
+
+> args(remainder)
+function (num, divisor = 2) 
+NULL
+
+| Type the following command and then we'll discuss how it works: evaluate(function(x){x+1}, 6)
+
+> evaluate(function(x){x+1}, 6)
+[1] 7
+
+| You nailed it! Good job!
+
+  |==============================================================================                                       |  67%
+
+| The first argument is a tiny anonymous function that takes one argument `x` and returns `x+1`. We passed the number 6 into
+| this function so the entire expression evaluates to 7.
+
