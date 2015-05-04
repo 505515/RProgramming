@@ -1,0 +1,4 @@
+s <- split(airquality, aurquality$Month)
+
+Splitter ut i måneder
+

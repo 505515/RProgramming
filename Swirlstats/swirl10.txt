@@ -1,0 +1,29 @@
+| Type cls_list <- lapply(flags, class) to apply the class() function to each column of the flags dataset and store the result
+| in a variable called cls_list. Note that you just supply the name of the function you want to apply (i.e. class), without
+| the usual parentheses after it.
+
+> cls_list <- lapply(flags, class)
+
+looper gjennom flags og finner ut hva type data hver col. er:
+
+ cls_list
+$name
+[1] "factor"
+
+$landmass
+[1] "integer"
+
+$zone
+[1] "integer"
+
+$area
+[1] "integer"
+
+$population
+[1] "integer"
+
+**
+
+flag_colors <- flags[, 11:17]
+
+Hent ut alle rader, men bare collone 11 til 17
